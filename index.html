@@ -59,26 +59,30 @@
   <!-- Existing JavaScript -->
   <script src="js/global.js" defer></script>
 
-  <!-- Structured data: website owner -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Prabin Kandel",
-    "url": "https://prabin-kandel.com.np/",
-    "jobTitle": "Developer and Project Maker",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Pokhara",
-      "addressRegion": "Gandaki Province",
-      "addressCountry": "NP"
-    },
-    "sameAs": [
-      "https://github.com/PrabinKandel1",
-      "https://www.facebook.com/prabinkandel123"
-    ]
-  }
-  </script>
+ ```html
+<!-- Structured data: website owner -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Prabin Kandel",
+  "url": "https://prabin-kandel.com.np/",
+  "image": "https://prabin-kandel.com.np/assets/seo/66.webp",
+  "jobTitle": "Developer and Project Maker",
+  "description": "Prabin Kandel is a developer and project maker from Pokhara, Nepal, building interfaces and software through curiosity and careful problem-solving.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pokhara",
+    "addressRegion": "Gandaki Province",
+    "addressCountry": "NP"
+  },
+  "sameAs": [
+    "https://github.com/PrabinKandel1",
+    "https://www.facebook.com/prabinkandel123"
+  ]
+}
+</script>
+```
 </head>
 
   <body data-page="home">
