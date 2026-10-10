@@ -1,0 +1,7 @@
+/* Stable typography: use local system fonts only, so late web-font swaps cannot change glyph shape or size. */
+html body {
+  font-synthesis: none;
+}
+html body em {
+  font-style: normal !important;
+}

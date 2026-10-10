@@ -1,0 +1,128 @@
+/* Final contact-page glass treatment: deliberately visible, restrained and accessible. */
+body[data-page="contact"] .contact-layout {
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;
+  align-items:stretch !important;
+  gap:22px !important;
+}
+body[data-page="contact"] .contact-grid { display:contents !important; }
+body[data-page="contact"] .contact-form-card { grid-column:1 / -1 !important; }
+body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"],
+body[data-page="contact"] .social-panel { grid-column:span 1 !important; }
+body[data-page="contact"] .contact-map-panel { grid-column:1 / -1 !important; }
+body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"],
+body[data-page="contact"] .social-panel {
+  position:relative !important;
+  isolation:isolate !important;
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+  min-width:0 !important;
+  min-height:300px !important;
+  padding:clamp(28px,3.4vw,44px) !important;
+  border:1px solid rgba(255,255,255,.94) !important;
+  border-radius:28px !important;
+  background:
+    radial-gradient(ellipse at 92% 0%, rgba(177,214,184,.42), transparent 46%),
+    linear-gradient(135deg, rgba(255,255,255,.84) 0%, rgba(246,251,246,.70) 52%, rgba(226,240,228,.64) 100%) !important;
+  box-shadow:0 22px 58px rgba(36,73,47,.12), 0 3px 12px rgba(36,73,47,.045), inset 0 1px 0 rgba(255,255,255,.98), inset 0 -1px 0 rgba(104,145,111,.12) !important;
+  -webkit-backdrop-filter:blur(24px) saturate(145%) !important;
+  backdrop-filter:blur(24px) saturate(145%) !important;
+  transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease !important;
+}
+body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"]::before,
+body[data-page="contact"] .social-panel::before {
+  content:"" !important;
+  position:absolute !important;
+  z-index:-1 !important;
+  width:210px !important;
+  height:210px !important;
+  right:-92px !important;
+  top:-105px !important;
+  border:1px solid rgba(86,130,96,.20) !important;
+  border-radius:50% !important;
+  box-shadow:0 0 0 18px rgba(255,255,255,.18), 0 0 0 38px rgba(89,132,98,.055) !important;
+  pointer-events:none !important;
+}
+body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"]::after,
+body[data-page="contact"] .social-panel::after {
+  content:"" !important;
+  position:absolute !important;
+  z-index:-1 !important;
+  inset:1px !important;
+  border-radius:27px !important;
+  background:linear-gradient(115deg,rgba(255,255,255,.30),transparent 42%) !important;
+  pointer-events:none !important;
+}
+body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"]:hover,
+body[data-page="contact"] .social-panel:hover {
+  transform:translateY(-4px) !important;
+  border-color:rgba(255,255,255,1) !important;
+  box-shadow:0 28px 66px rgba(36,73,47,.16), inset 0 1px 0 rgba(255,255,255,1) !important;
+}
+body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"] > *,
+body[data-page="contact"] .social-panel > * { position:relative; z-index:1; }
+body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"] .section-index,
+body[data-page="contact"] .social-panel .section-index {
+  display:inline-flex !important;
+  align-items:center !important;
+  min-height:30px !important;
+  padding:6px 11px !important;
+  border:1px solid rgba(70,111,79,.15) !important;
+  border-radius:999px !important;
+  background:rgba(255,255,255,.64) !important;
+  color:#42664a !important;
+  letter-spacing:.1em !important;
+  font-size:10px !important;
+}
+body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"] .contact-label {
+  margin-top:28px !important;
+  color:#477a52 !important;
+  font-size:11px !important;
+  font-weight:750 !important;
+  letter-spacing:.14em !important;
+}
+body[data-page="contact"] .contact-email-heading,
+body[data-page="contact"] .social-panel h2 { max-width:16ch !important; }
+body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"] .button-link {
+  margin-top:auto !important;
+  padding:13px 18px !important;
+  border:1px solid rgba(66,110,76,.22) !important;
+  border-radius:999px !important;
+  background:rgba(255,255,255,.78) !important;
+  box-shadow:0 5px 16px rgba(45,79,51,.07), inset 0 1px rgba(255,255,255,.95) !important;
+}
+body[data-page="contact"] .contact-social-row { margin-top:28px !important; gap:12px !important; }
+body[data-page="contact"] .contact-social-row a {
+  display:grid !important;
+  place-items:center !important;
+  width:48px !important;
+  height:48px !important;
+  flex:0 0 48px !important;
+  border:1px solid rgba(68,111,78,.18) !important;
+  border-radius:16px !important;
+  background:rgba(255,255,255,.74) !important;
+  color:#315a3a !important;
+  box-shadow:0 6px 18px rgba(40,76,47,.07), inset 0 1px rgba(255,255,255,.9) !important;
+  transition:transform .2s ease, background .2s ease, box-shadow .2s ease !important;
+}
+body[data-page="contact"] .contact-social-row a:hover,
+body[data-page="contact"] .contact-social-row a:focus-visible {
+  transform:translateY(-3px) !important;
+  background:#fff !important;
+  box-shadow:0 12px 24px rgba(40,76,47,.13) !important;
+}
+body[data-page="contact"] .contact-social-row svg { width:20px !important; height:20px !important; }
+@media(max-width:760px) {
+  body[data-page="contact"] .contact-layout { grid-template-columns:minmax(0,1fr) !important; gap:18px !important; }
+  body[data-page="contact"] .contact-form-card,
+  body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"],
+  body[data-page="contact"] .social-panel,
+  body[data-page="contact"] .contact-map-panel { grid-column:1 !important; }
+  body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"],
+  body[data-page="contact"] .social-panel { min-height:260px !important; padding:25px !important; border-radius:23px !important; }
+}
+@media(prefers-reduced-motion:reduce) {
+  body[data-page="contact"] .contact-primary[aria-labelledby="direct-contact-heading"],
+  body[data-page="contact"] .social-panel,
+  body[data-page="contact"] .contact-social-row a { transition:none !important; }
+}
