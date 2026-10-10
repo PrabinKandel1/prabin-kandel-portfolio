@@ -2,7 +2,6 @@
 /**
  * Prabin Kandel Portfolio
  * EmailJS browser configuration
- *
  * Used by: js/contactform.js
  */
 
